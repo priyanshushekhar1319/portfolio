@@ -4,3 +4,19 @@ frames_chest/
 frames_webp/
 *.mp4
 *.py
+
+# Scratch and test image files
+priyanshu*.jpg
+priyanshu_front.png
+priyanshu_back.png
+priyanshu_cutout_*.png
+priyanshu_hd_*.png
+priyanshu_hero.png
+priyanshu_hires_*.png
+priyanshu_seamless_back.png
+perfect_front.png
+perfect_back.png
+perfect_left.png
+perfect_right.png
+white_*.jpg
+
