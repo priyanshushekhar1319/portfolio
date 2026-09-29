@@ -1,0 +1,295 @@
+/* ==========================================================================
+   PRIYANSHU SHEKHAR — EXACT EDITORIAL STUDIO 3D SCRUB STYLESHEET
+   Matching Exact Screen Photo: Studio Spotlight, High-Key Rim Glow, Crisp Typography
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-deep: #09090D;
+  --bg-spotlight: #6E717A;
+  --bg-card: rgba(18, 18, 24, 0.75);
+  
+  --font-display: 'Plus Jakarta Sans', 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Global Reset with Standard System Cursor */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+a, button, input, textarea, select {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3D Capabilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ==========================================================================
+   STUDIO SPOTLIGHT BACKGROUND (Luminous Soft White Studio Halo Match to Reference)
+   ========================================================================== */
+.studio-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 70% 60% at 50% 34%, 
+      #5C6272 0%, 
+      #444957 24%, 
+      #292d37 48%, 
+      #14161d 72%, 
+      #090a0d 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Atmospheric Ambient High-Key Studio Diffuse Backlight directly centered behind model */
+.studio-rim-glow {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 880px;
+  height: 700px;
+  background: radial-gradient(ellipse at center, 
+    rgba(255, 255, 255, 0.58) 0%, 
+    rgba(235, 240, 252, 0.35) 26%, 
+    rgba(175, 188, 210, 0.12) 52%, 
+    transparent 78%);
+  filter: blur(75px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+/* ==========================================================================
+   3D MULTI-ANGLE ROTATING PORTRAIT STAGE (LARGE & COMMANDING)
+   ========================================================================== */
+#portrait-3d-stage {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero-turntable-canvas,
+.hero-turntable-video {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  z-index: 10;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.5));
+}
+
+.hero-turntable-canvas:active {
+  cursor: grabbing;
+}
+
+#portrait-rotator {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.portrait-angle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
+  -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity, transform;
+  transform-style: preserve-3d;
+  transition: opacity 0.12s ease-out;
+}
+
+.portrait-angle.active {
+  opacity: 1;
+}
+
+/* Polished Titanium Chrome Gradient for DEVELOPER (Exact match to reference photo) */
+.text-metallic-silver {
+  background: linear-gradient(180deg, 
+    #FFFFFF 0%, 
+    #EDF2FA 22%, 
+    #BAC1D2 52%, 
+    #848C9E 80%, 
+    #5E6476 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 14px rgba(255, 255, 255, 0.12));
+}
+
+/* Exact Pill Buttons from Screenshot */
+.btn-white-pill {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.btn-white-pill:hover {
+  background-color: #F1F5F9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.35);
+}
+
+.btn-black-pill {
+  background-color: rgba(10, 10, 14, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-black-pill:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Cards & Marquee */
+.bento-card {
+  background: rgba(16, 17, 24, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.root-card {
+  background: rgba(16, 17, 24, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.root-card::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 48px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(200, 210, 230, 0.3) 40%, transparent 80%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.root-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  gap: 1.5rem;
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  animation: scroll-marquee 28s linear infinite;
+}
+
+@keyframes scroll-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2B35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555765;
+}

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyanshu Shekhar — Creative Developer & Systems Architect</title>
+  <meta name="description" content="Official 3D Portfolio of Priyanshu Shekhar — Full-Stack Engineer, Data Analyst, LeetCode Knight 1950, Walmart SparkPlug Top 1%." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Syne, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#09090D] text-white antialiased">
+
+  <!-- =========================================================================
+       1. TOP NAVIGATION BAR (Exact Match to Reference Screenshot)
+       ========================================================================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-6 sm:px-12 py-6 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="text-2xl font-bold tracking-tight text-white flex items-center">
+        Priyanshu<span class="text-white">.</span>
+      </a>
+
+      <!-- Center Minimalist Nav Links (No container box, exactly like screenshot) -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#hero" class="text-xs font-semibold text-white hover:text-white transition-colors">Home</a>
+        <a href="#profile" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="#roadmap" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">Expertise</a>
+        <a href="#roadmap" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">Skills</a>
+        <a href="#projects" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">Projects</a>
+        <a href="#honors" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">Certifications</a>
+        <a href="#dispatch" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action Pill Button -->
+      <div class="flex items-center gap-3">
+        <a href="#dispatch" class="px-5 py-1.5 rounded-full bg-black/40 border border-white/30 text-white hover:bg-white hover:text-black text-xs font-semibold tracking-wide transition-all shadow-lg">
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION (100VH Standard Screen - Scrolls Directly to Next Section)
+       ========================================================================= -->
+  <div id="hero-scrub-container" class="relative w-full h-screen min-h-[680px] flex flex-col justify-between overflow-hidden">
+    
+    <!-- Studio Radial Spotlight Background (Grey/White diffuse center into dark edges) -->
+    <div class="studio-background"></div>
+
+    <!-- Diffuse Ambient White Rim Glow directly behind shoulders -->
+    <div class="studio-rim-glow"></div>
+
+    <!-- Main Middle Interactive Stage: Left Title + Center Spacer + Right Subtitle -->
+    <div class="max-w-[1440px] mx-auto w-full h-full px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 items-center relative z-20 pointer-events-none pt-4 pb-12">
+      
+      <!-- LEFT: Title & Heading (Large & Commanding, Matching Reference Photo) -->
+      <div class="lg:col-span-4 space-y-3 text-left pointer-events-auto max-w-[440px]">
+        <p id="hero-salutation" class="text-xs sm:text-sm font-semibold tracking-[0.2em] text-white uppercase flex items-center gap-1.5">
+          <span>HI, I'M</span>
+          <span class="font-bold text-white border-b-2 border-white pb-0.5">PRIYANSHU</span>
+        </p>
+
+        <div class="space-y-0 tracking-[-0.035em] leading-[0.88]">
+          <h1 id="hero-title-1" class="text-5xl sm:text-6xl lg:text-[4.6rem] font-black text-white uppercase tracking-tight">
+            CREATIVE
+          </h1>
+          <h1 id="hero-title-2" class="text-5xl sm:text-6xl lg:text-[4.6rem] font-black text-metallic-silver uppercase tracking-tight">
+            DEVELOPER
+          </h1>
+        </div>
+      </div>
+
+      <!-- CENTER GRID SPACER (Preserves generous central stage space for portrait) -->
+      <div class="hidden lg:block lg:col-span-4 h-full pointer-events-none"></div>
+
+      <!-- RIGHT: Subtitle, Turning Ideas into Reality (Crisp & Readable) -->
+      <div class="lg:col-span-4 space-y-3 text-left lg:pl-10 pointer-events-auto max-w-[360px] ml-auto">
+        <p id="hero-tagline" class="text-xs font-mono text-cyan-300 font-medium uppercase tracking-widest drop-shadow-[0_0_12px_rgba(34,211,238,0.3)]">
+          // TURNING IDEAS INTO REALITY
+        </p>
+        <p id="hero-subtext" class="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          Available for hire. Building fast, responsive web applications using modern tech stacks.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CENTER: 3D VOLUMETRIC ROTATING PORTRAIT & 360 TURNTABLE STAGE (LARGE, SCREEN-FILLING) -->
+    <div id="portrait-3d-stage" class="absolute left-1/2 bottom-0 w-[580px] sm:w-[720px] lg:w-[860px] xl:w-[920px] h-[93vh] max-h-[900px] flex items-end justify-center z-10 pointer-events-none">
+      
+      <!-- Ultra-High Performance 60FPS Apple-Grade Canvas Turntable (Chest Crop, Transparent) -->
+      <canvas 
+        id="hero-turntable-canvas" 
+        class="hero-turntable-canvas" 
+        width="560" 
+        height="500"
+      ></canvas>
+
+      <!-- 3D Volumetric Head-Turn Rotator (Real Studio White Shirt Photos) -->
+      <div id="portrait-rotator" class="w-full h-full preserve-3d relative">
+        
+        <!-- 1. FRONT VIEW (0°) -->
+        <div id="angle-front" class="portrait-angle" style="opacity: 1; transform: rotateY(0deg);">
+          <img 
+            src="perfect_white_front.png" 
+            alt="Priyanshu Shekhar - Front White Shirt HD" 
+            class="w-full h-full object-contain object-bottom drop-shadow-[0_12px_32px_rgba(0,0,0,0.35)]" 
+          />
+        </div>
+
+        <!-- 2. LEFT SIDE PROFILE VIEW (-35°) -->
+        <div id="angle-left" class="portrait-angle" style="opacity: 0; transform: rotateY(18deg);">
+          <img 
+            src="perfect_white_left.png" 
+            alt="Priyanshu Shekhar - Left Profile White Shirt HD" 
+            class="w-full h-full object-contain object-bottom drop-shadow-[0_12px_32px_rgba(0,0,0,0.35)]" 
+          />
+        </div>
+
+        <!-- 3. BACK VIEW (180°) -->
+        <div id="angle-back" class="portrait-angle" style="opacity: 0; transform: rotateY(0deg);">
+          <img 
+            src="perfect_white_back.png" 
+            alt="Priyanshu Shekhar - Back White Shirt HD" 
+            class="w-full h-full object-contain object-bottom drop-shadow-[0_12px_32px_rgba(0,0,0,0.35)]" 
+          />
+        </div>
+
+        <!-- 4. RIGHT SIDE PROFILE VIEW (+35°) -->
+        <div id="angle-right" class="portrait-angle" style="opacity: 0; transform: rotateY(-18deg);">
+          <img 
+            src="perfect_white_right.png" 
+            alt="Priyanshu Shekhar - Right Profile White Shirt HD" 
+            class="w-full h-full object-contain object-bottom drop-shadow-[0_12px_32px_rgba(0,0,0,0.35)]" 
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR: Fixed at bottom of hero viewport -->
+    <div class="absolute bottom-6 left-0 right-0 max-w-7xl mx-auto w-full px-6 sm:px-12 flex items-center justify-between z-30 pointer-events-none">
+      <!-- Bottom Left: DRAG TO ROTATE 360° -->
+      <div class="flex items-center gap-2 text-xs font-semibold text-slate-300 tracking-wider pointer-events-auto">
+        <span class="text-sm font-bold">&harr;</span>
+        <span class="tracking-[0.2em] uppercase text-[11px] font-semibold text-slate-300">DRAG TO ROTATE 360&deg;</span>
+      </div>
+
+      <!-- Bottom Right: View My Work & Contact Me Pill Buttons -->
+      <div class="flex items-center gap-3 pointer-events-auto">
+        <a href="#projects" class="btn-white-pill">
+          View My Work
+        </a>
+        <a href="#dispatch" class="btn-black-pill">
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       3. SECTION 2: SYSTEM PROFILE / BENTO ABOUT (Exact Video Frame 4)
+       ========================================================================= -->
+  <section id="profile" class="py-24 px-6 sm:px-12 max-w-7xl mx-auto relative z-10">
+    <div class="space-y-4 mb-12">
+      <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-slate-300 inline-flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> // SYSTEM PROFILE
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+        Hello, I'm Priyanshu Shekhar
+      </h2>
+      <p class="max-w-3xl text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+        A passionate Full-Stack Developer dedicated to crafting clean, functional, and highly scalable web applications. Specializing in high-performance architectures, intuitive user experiences, and robust backend pipelines.
+      </p>
+    </div>
+
+    <!-- Bento Grid (Frame 4 Layout) -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+      
+      <!-- Left Card: Framed Photo with Status Footer -->
+      <div class="md:col-span-5 bento-card p-4 flex flex-col justify-between">
+        <div class="w-full h-80 rounded-2xl overflow-hidden relative bg-[#14151D]">
+          <img src="priyanshu_seamless_front.png" alt="Priyanshu Shekhar" class="w-full h-full object-cover object-top" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#101118] via-transparent to-transparent"></div>
+        </div>
+
+        <div class="mt-4 px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-between text-xs font-mono">
+          <span class="flex items-center gap-2 text-emerald-400 font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            OPEN TO OPPORTUNITIES
+          </span>
+          <span class="text-slate-300 font-bold">2026</span>
+        </div>
+      </div>
+
+      <!-- Right Column: 3 Bento Cards -->
+      <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <div class="bento-card p-6 flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-2xl font-bold text-white">Full-Stack</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Modular React.js frontend combined with robust Spring Boot REST microservices.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">
+            ARCHITECTURE
+          </div>
+        </div>
+
+        <div class="bento-card p-6 flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-2xl font-bold text-white">React & Node</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Concurrency, Redis in-memory caching, JWT authentication, and sub-200ms pipelines.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">
+            CORE TECH
+          </div>
+        </div>
+
+        <div class="bento-card p-6 flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-2xl font-bold text-white">Scalable</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Serving 50K+ users with 99.95% availability, Docker containerization, and CI/CD.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">
+            SYSTEMS
+          </div>
+        </div>
+
+        <div class="bento-card p-6 flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-2xl font-bold text-white">Analytics</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              2.5M+ records, complex SQL CTEs, Power BI DAX, and automated batch churn models.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">
+            DATA PIPELINES
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SECTION 3: CONTINUOUS SKILL MARQUEE & CORE EXECUTION ROOT MAP (Frame 5)
+       ========================================================================= -->
+  <section id="roadmap" class="py-20 relative z-10 border-y border-white/[0.08] bg-[#0E0F15] overflow-hidden">
+    
+    <!-- Continuous Moving Skill Pill Marquee -->
+    <div class="marquee-wrapper mb-16">
+      <div class="marquee-content">
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Generative AI</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">LLMs</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Golang</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Java (Spring Boot)</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">React.js & Redux</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">PostgreSQL</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Redis In-Memory</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Prompt Engineering</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Machine Learning</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">NLP</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Docker & Kubernetes</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Generative AI</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">LLMs</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Golang</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Java (Spring Boot)</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">React.js & Redux</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">PostgreSQL</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Redis In-Memory</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Prompt Engineering</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Machine Learning</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">NLP</span>
+        <span class="px-5 py-2 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-mono text-slate-200">Docker & Kubernetes</span>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-12">
+      <div class="text-center space-y-3 mb-14">
+        <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-slate-300">
+          // ENGINEERING ROADMAP
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Core Execution Root Map
+        </h2>
+      </div>
+
+      <!-- 4 Glowing Root Cards (Exact Frame 5) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- ROOT 01 -->
+        <div class="root-card flex flex-col justify-between h-72">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span>// ROOT 01</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Frontend Development</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-light">
+              Architecting responsive, high-performance UI components.
+            </p>
+          </div>
+          <div class="pt-4">
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/[0.1] text-xs font-mono text-slate-200 inline-block font-semibold">
+              React & Tailwind
+            </span>
+          </div>
+        </div>
+
+        <!-- ROOT 02 -->
+        <div class="root-card flex flex-col justify-between h-72">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span>// ROOT 02</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Backend Development</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-light">
+              Building secure REST APIs and robust data pipelines.
+            </p>
+          </div>
+          <div class="pt-4">
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/[0.1] text-xs font-mono text-slate-200 inline-block font-semibold">
+              Node.js & Databases
+            </span>
+          </div>
+        </div>
+
+        <!-- ROOT 03 -->
+        <div class="root-card flex flex-col justify-between h-72">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span>// ROOT 03</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            </div>
+            <h3 class="text-lg font-bold text-white">AI & Machine Learning</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-light">
+              Integrating intelligent models and automated workflows.
+            </p>
+          </div>
+          <div class="pt-4">
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/[0.1] text-xs font-mono text-slate-200 inline-block font-semibold">
+              Generative AI & LLMs
+            </span>
+          </div>
+        </div>
+
+        <!-- ROOT 04 -->
+        <div class="root-card flex flex-col justify-between h-72">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+              <span>// ROOT 04</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Cloud & Deployment</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-light">
+              Containerizing systems and ensuring seamless production.
+            </p>
+          </div>
+          <div class="pt-4">
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/[0.1] text-xs font-mono text-slate-200 inline-block font-semibold">
+              Docker & CI/CD
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. SECTION 4: PROJECTS (Aapke Resumes Se)
+       ========================================================================= -->
+  <section id="projects" class="py-24 px-6 sm:px-12 max-w-7xl mx-auto relative z-10">
+    <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
+      <div class="space-y-2">
+        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">// SELECTED WORKS</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Featured Engineering Projects
+        </h2>
+      </div>
+      <a href="https://github.com/priyanshushekhar1319" target="_blank" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1 group">
+        Explore GitHub <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Project 1: Careerthon AI SaaS -->
+      <div class="bento-card p-8 space-y-6">
+        <div class="flex items-center justify-between">
+          <span class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/20 text-white text-xs font-mono font-semibold">
+            FLAGSHIP SAAS
+          </span>
+          <a href="https://carrerthon.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium hover:bg-emerald-500/20 transition-all">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Live: carrerthon.in</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="text-2xl font-bold text-white">
+            <a href="https://carrerthon.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition-colors inline-flex items-center gap-2">
+              Careerthon — AI Resume & Profile SaaS
+              <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400"></i>
+            </a>
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Architected and deployed a multi-tenant AI profile intelligence platform serving 50K+ professionals. Implemented weighted scoring engine across 18+ ATS dimensions, sub-200ms document extraction latency, and 99.4% text parsing fidelity.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-center font-mono">
+          <div>
+            <p class="text-xl font-bold text-white">50K+</p>
+            <p class="text-[10px] text-slate-400 uppercase">Users Served</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold text-emerald-400">&lt;200ms</p>
+            <p class="text-[10px] text-slate-400 uppercase">Extraction Latency</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold text-white">99.95%</p>
+            <p class="text-[10px] text-slate-400 uppercase">SLA Uptime</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">Java Spring Boot</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">React.js</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">PostgreSQL</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">Redis Caching</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">Docker CI/CD</span>
+        </div>
+
+        <div class="pt-2 flex items-center justify-between">
+          <a href="https://carrerthon.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-xs hover:bg-slate-200 transition-all shadow-lg hover:shadow-cyan-500/20">
+            <span>Visit Live Platform</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+          <span class="text-xs font-mono text-slate-400">50K+ Active Users</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Sasken Technologies Platform -->
+      <div class="bento-card p-8 space-y-6">
+        <div class="flex items-center justify-between">
+          <span class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/20 text-white text-xs font-mono font-semibold">
+            ENTERPRISE INTERNSHIP
+          </span>
+          <span class="text-xs font-mono text-slate-400">Sasken Technologies</span>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="text-2xl font-bold text-white">
+            Customer Intelligence & Churn Platform
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Engineered RESTful microservices with JWT-based RBAC and Redis caching, cutting P95 latency by 65% (420ms to 145ms). Built automated ETL pipelines across 2.5M+ records and integrated statistical churn prediction with 82% accuracy.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-center font-mono">
+          <div>
+            <p class="text-xl font-bold text-emerald-400">65%</p>
+            <p class="text-[10px] text-slate-400 uppercase">Latency Drop</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold text-white">2.5M+</p>
+            <p class="text-[10px] text-slate-400 uppercase">Records Queried</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold text-white">&lt;15 min</p>
+            <p class="text-[10px] text-slate-400 uppercase">MIS Turnaround</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">React.js</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">Spring Boot</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">PostgreSQL</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">Power BI</span>
+          <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">Python ETL</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SECTION 5: HONORS & COMPETITIVE PROGRAMMING ARENA
+       ========================================================================= -->
+  <section id="honors" class="py-20 px-6 sm:px-12 max-w-7xl mx-auto relative z-10">
+    <div class="space-y-3 mb-12 text-center">
+      <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-slate-300">
+        // ALGORITHMIC MASTERY & HONORS
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+        Competitive Highlights
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- LeetCode Knight -->
+      <div class="bento-card p-6 text-center space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-white/[0.06] border border-white/20 flex items-center justify-center text-white">
+          <i data-lucide="award" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white">LeetCode Knight</h4>
+        <p class="text-2xl font-mono font-black text-white">1950 Rating</p>
+        <p class="text-xs text-slate-400">Top 3.6% globally • 1000+ DSA Solved • Contest Ranks 489 & 499</p>
+      </div>
+
+      <!-- Walmart SparkPlug -->
+      <div class="bento-card p-6 text-center space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-white/[0.06] border border-white/20 flex items-center justify-center text-white">
+          <i data-lucide="zap" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white">Walmart SparkPlug</h4>
+        <p class="text-2xl font-mono font-black text-emerald-400">Top 1% Finalist</p>
+        <p class="text-xs text-slate-400">Ranked in Top 1% among 19,700+ nationwide participants</p>
+      </div>
+
+      <!-- Codeforces Specialist -->
+      <div class="bento-card p-6 text-center space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-white/[0.06] border border-white/20 flex items-center justify-center text-white">
+          <i data-lucide="terminal" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white">Codeforces</h4>
+        <p class="text-2xl font-mono font-black text-white">1595 Specialist</p>
+        <p class="text-xs text-slate-400">Global Rank 190 in Round 1093 (Div. 2) among 42,000+ coders</p>
+      </div>
+
+      <!-- Techno-Thon 2.0 -->
+      <div class="bento-card p-6 text-center space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-white/[0.06] border border-white/20 flex items-center justify-center text-white">
+          <i data-lucide="trophy" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white">TECHNO-THON 2.0</h4>
+        <p class="text-2xl font-mono font-black text-white">2nd Place</p>
+        <p class="text-xs text-slate-400">Outperformed 180+ teams nationwide in 24-hr product hackathon</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. SECTION 6: LIVE DISPATCH NODE / CONTACT (Video Frame 6)
+       ========================================================================= -->
+  <section id="dispatch" class="py-24 px-6 sm:px-12 max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Card: Live Dispatch Node & Live JSON Payload Preview (Frame 6) -->
+      <div class="lg:col-span-5 bento-card p-8 space-y-6">
+        <div class="flex items-center justify-between text-xs font-mono">
+          <span class="text-white uppercase tracking-widest flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            // LIVE DISPATCH NODE
+          </span>
+          <span class="text-slate-400">PORT 443</span>
+        </div>
+
+        <div class="space-y-2">
+          <h2 class="text-3xl font-black text-white">
+            Let's Build Something Exceptional.
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+            Fill out the transmission form or preview your live payload stream directly below.
+          </p>
+        </div>
+
+        <!-- Real-Time Interactive JSON Code Preview (Frame 6) -->
+        <div class="rounded-xl bg-[#09090D] border border-white/[0.1] p-4 font-mono text-xs text-slate-300 space-y-1.5 shadow-inner">
+          <p class="text-slate-500">// payload_preview.json</p>
+          <p><span class="text-slate-400">sender:</span> <span id="json-sender" class="text-white font-semibold">[Awaiting Name]</span></p>
+          <p><span class="text-slate-400">email:</span> <span id="json-email" class="text-white font-semibold">[Awaiting Email]</span></p>
+          <p><span class="text-slate-400">message:</span> <span id="json-msg" class="text-slate-400">"[Awaiting Message]"</span></p>
+          <p class="text-slate-500 pt-2 flex items-center gap-1.5 text-[10px]">
+            <i data-lucide="check-circle" class="w-3 h-3 text-emerald-400"></i>
+            TLS v1.3 Verified • Sub-50ms dispatch
+          </p>
+        </div>
+
+        <div class="space-y-2 pt-2 border-t border-white/[0.06] text-xs font-mono">
+          <p class="text-slate-300 flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-white"></i>
+            priyanshushekhar616@gmail.com
+          </p>
+          <p class="text-slate-300 flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+            +91 9142774437
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Card: Form Inputs (Frame 6) -->
+      <div class="lg:col-span-7 bento-card p-8">
+        <!-- Direct Fast Channels -->
+        <div class="mb-6 pb-6 border-b border-white/[0.08] flex flex-wrap items-center justify-between gap-3">
+          <span class="text-xs font-mono text-slate-400">Direct Express Channels:</span>
+          <div class="flex items-center gap-2">
+            <a href="https://wa.me/919142774437?text=Hi%20Priyanshu,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" class="px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-black text-xs font-semibold flex items-center gap-1.5 transition-all">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+            </a>
+            <a href="mailto:priyanshushekhar616@gmail.com?subject=Portfolio%20Inquiry%20from%20Website" class="px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/20 text-white hover:bg-white hover:text-black text-xs font-semibold flex items-center gap-1.5 transition-all">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i> Direct Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Real FormSubmit Form: Directly routed to priyanshushekhar616@gmail.com -->
+        <form id="contact-form" action="https://formsubmit.co/priyanshushekhar616@gmail.com" method="POST" class="space-y-4">
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_subject" id="form-subject" value="New Portfolio Message for Priyanshu Shekhar" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1">
+              <label class="text-xs font-mono text-slate-400">First Name</label>
+              <input type="text" id="input-first-name" name="first_name" placeholder="John" required class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.12] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white transition-colors" />
+            </div>
+            <div class="space-y-1">
+              <label class="text-xs font-mono text-slate-400">Last Name</label>
+              <input type="text" id="input-last-name" name="last_name" placeholder="Doe" class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.12] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white transition-colors" />
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-xs font-mono text-slate-400">Email Address</label>
+            <input type="email" id="input-email" name="email" placeholder="john.doe@company.com" required class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.12] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white transition-colors" />
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-xs font-mono text-slate-400">Your Message</label>
+            <textarea id="input-message" name="message" rows="4" placeholder="Type your message here..." required class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.12] text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white transition-colors"></textarea>
+          </div>
+
+          <div class="flex items-center gap-2 pt-2">
+            <input type="checkbox" id="consent-check" required class="rounded bg-white/10 border-white/20 text-white focus:ring-0 cursor-pointer" />
+            <label for="consent-check" class="text-xs text-slate-400 select-none cursor-pointer">
+              I give permission to deliver this message directly to priyanshushekhar616@gmail.com
+            </label>
+          </div>
+
+          <!-- Status Notification Banner -->
+          <div id="dispatch-status" class="hidden p-4 rounded-xl text-xs font-mono"></div>
+
+          <div class="pt-4 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500 flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Encrypted Direct Inbox Delivery
+            </span>
+            <!-- White Pill Send Button -->
+            <button type="submit" id="submit-btn" class="btn-white-pill">
+              Send Message <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. FOOTER
+       ========================================================================= -->
+  <footer class="py-12 border-t border-white/[0.08] text-center text-xs font-mono text-slate-400 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Priyanshu Shekhar. Engineered with 3D Scrub & High-Performance WebGL.</p>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/priyanshushekhar1319" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+        <a href="mailto:priyanshushekhar616@gmail.com" class="hover:text-white transition-colors">Email</a>
+        <a href="#hero" class="hover:text-white transition-colors">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master Script -->
+  <script src="script.js"></script>
+</body>
+</html>
